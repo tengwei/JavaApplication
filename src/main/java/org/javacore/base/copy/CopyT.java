@@ -36,7 +36,7 @@ class Family implements Cloneable{
      * 深拷贝
      * @return
      */
-    /*@Override
+    @Override
     public Object clone() {
         Object o = null;
         try {
@@ -45,7 +45,7 @@ class Family implements Cloneable{
             e.printStackTrace();
         }
         return o;
-    }*/
+    }
 }
 class Student implements Cloneable{
     private String name;
@@ -72,15 +72,15 @@ class Student implements Cloneable{
      * @return
      * @throws CloneNotSupportedException
      */
-    @Override
-    protected Object clone() throws CloneNotSupportedException {
-        return super.clone();
-    }
+//    @Override
+//    protected Object clone() throws CloneNotSupportedException {
+//        return super.clone();
+//    }
 
     /**
      * 深拷贝
      */
-    /*@Override
+    @Override
     protected Object clone() {
         Student o = null;
         try {
@@ -90,7 +90,7 @@ class Student implements Cloneable{
         }
         o.family = (Family) family.clone();
         return o;
-    }*/
+    }
 }
 
 public class CopyT {
