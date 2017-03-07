@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
  * Created by Administrator on 2017/2/15.
  */
 @Controller
-@RequestMapping("/sample")
+@RequestMapping("/jdbc")
 public class SampleController {
     @RequestMapping("/home1")
     @ResponseBody
