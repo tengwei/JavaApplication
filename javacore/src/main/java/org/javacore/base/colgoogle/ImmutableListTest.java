@@ -2,10 +2,6 @@ package org.javacore.base.colgoogle;
 
 import com.google.common.collect.*;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-
 /**
  * Created by tengw on 2017/3/6.
  */
