@@ -3,6 +3,7 @@ package org.javacore.unsafeClass;
 import sun.misc.Unsafe;
 
 import java.lang.reflect.Field;
+import java.lang.reflect.Method;
 
 public class UnsafeTest {
 
@@ -37,6 +38,13 @@ public class UnsafeTest {
         user.test();
 
         Field userField = User.class.getDeclaredField("name");
+        userField.setAccessible(Boolean.TRUE);
+        System.out.println((String) userField.get(user));
+
+        Method method = User.class.getDeclaredMethod("test");
+
+        method.invoke(user);
+
         unsafe.putObject(user, unsafe.objectFieldOffset(userField), "kao");
 
 
@@ -50,6 +58,10 @@ public class UnsafeTest {
 
         User() {
             System.err.println("init");
+        }
+
+        public String getName() {
+            return name;
         }
 
         public void setName(String name) {
