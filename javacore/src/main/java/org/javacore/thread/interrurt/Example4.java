@@ -23,8 +23,8 @@ class Example4 extends Thread {
         thread1.interrupt();
         thread2.interrupt();
 
-        thread1.stop();
-        thread2.stop();
+        /*thread1.stop();
+        thread2.stop();*/
 
         Thread.sleep(3000);
         System.out.println("Stopping application...");
