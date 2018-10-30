@@ -1,22 +1,23 @@
 package com.tw.jdbc;
 
 import java.sql.*;
+import java.text.SimpleDateFormat;
 
 public class FirstExample {
     // JDBC driver name and database URL
     static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
-    static final String DB_URL = "jdbc:mysql://localhost/EMP?serverTimezone=GMT";
+    static final String DB_URL = "jdbc:mysql://localhost/EMP?useSSL=false&serverTimezone=UTC&useTimezone=true";
 
     //  Database credentials
     static final String USER = "root";
-    static final String PASS = "admin1234?";
+    static final String PASS = "root";
 
     public static void main(String[] args) {
         Connection conn = null;
         Statement stmt = null;
         try{
             //STEP 2: Register JDBC driver
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
 
             //STEP 3: Open a connection
             System.out.println("Connecting to database...");
@@ -26,7 +27,13 @@ public class FirstExample {
             System.out.println("Creating statement...");
             stmt = conn.createStatement();
             String sql;
-            sql = "SELECT id, first, last, age FROM Employees";
+
+            sql = "insert into Employees (first, last, age,date)values ('121','23423',20,'2018-10-30 08:00:00')";
+
+            stmt.execute(sql);
+
+            sql = "SELECT id, first, last, age,date FROM Employees";
+
             ResultSet rs = stmt.executeQuery(sql);
 
             //STEP 5: Extract data from result set
@@ -36,12 +43,15 @@ public class FirstExample {
                 int age = rs.getInt("age");
                 String first = rs.getString("first");
                 String last = rs.getString("last");
+                Date date = rs.getDate("date");
 
                 //Display values
                 System.out.print("ID: " + id);
                 System.out.print(", Age: " + age);
                 System.out.print(", First: " + first);
                 System.out.println(", Last: " + last);
+                SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+                System.out.println(", date: " + simpleDateFormat.format(date));
             }
             //STEP 6: Clean-up environment
             rs.close();
@@ -70,3 +80,11 @@ public class FirstExample {
         System.out.println("Goodbye!");
     }//end main
 }//end FirstExample
+
+/*    CREATE TABLE `emp`.`employees` (
+        `id` INT NOT NULL AUTO_INCREMENT,
+        `first` VARCHAR(45) NULL,
+        `last` VARCHAR(45) NULL,
+        `age` INT NULL,
+        `date` TIMESTAMP NULL,
+        PRIMARY KEY (`id`));*/
