@@ -38,6 +38,11 @@ public class LiftOff implements Runnable{
     }
     @Override
     public void run() {
+        try {
+            Thread.sleep(1000 * 60);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         while (countDown-- > 0){
             System.out.println(status());
             // 暂停当前正在执行线程，并执行其他线程。

@@ -6,7 +6,7 @@ import java.text.SimpleDateFormat;
 public class FirstExample {
     // JDBC driver name and database URL
     static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
-    static final String DB_URL = "jdbc:mysql://localhost/EMP?useSSL=false&serverTimezone=UTC&useTimezone=true";
+    static final String DB_URL = "jdbc:mysql://localhost/EMP?useSSL=false&serverTimezone=Asia/Shanghai&useTimezone=true";
 
     //  Database credentials
     static final String USER = "root";
@@ -18,7 +18,7 @@ public class FirstExample {
         try{
             //STEP 2: Register JDBC driver
             Class.forName("com.mysql.cj.jdbc.Driver");
-
+            Thread.currentThread().getContextClassLoader();
             //STEP 3: Open a connection
             System.out.println("Connecting to database...");
             conn = DriverManager.getConnection(DB_URL,USER,PASS);
