@@ -18,8 +18,8 @@ import java.security.spec.X509EncodedKeySpec;
 public class Rsa1 {
 
     //java默认"RSA"="RSA/ECB/PKCS1Padding"
-    //private final static String RSA_ALGORITHM = "RSA/ECB/OAEPPadding";
-    private final static String RSA_ALGORITHM = "RSA/ECB/PKCS1Padding";
+    private final static String RSA_ALGORITHM = "RSA/ECB/OAEPPadding";
+    //private final static String RSA_ALGORITHM = "RSA/ECB/PKCS1Padding";
 
 
     private static final String KEY_ALGORITHM = "RSA";
@@ -27,8 +27,8 @@ public class Rsa1 {
     /**
      * RSA最大加密明文大小
      */
-    private static final int MAX_ENCRYPT_BLOCK = 117;  //RSA/ECB/PKCS1Padding  1024/8 -11
-    //private static final int MAX_ENCRYPT_BLOCK = 86;  //RSA/ECB/OAEPPadding  1024/8 -42
+    //private static final int MAX_ENCRYPT_BLOCK = 117;  //RSA/ECB/PKCS1Padding  1024/8 -11
+    private static final int MAX_ENCRYPT_BLOCK = 86;  //RSA/ECB/OAEPPadding  1024/8 -42
 
     /**
      * RSA最大解密密文大小  keyPairGenerator.initialize(1024);
