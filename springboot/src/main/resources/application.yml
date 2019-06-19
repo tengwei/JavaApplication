@@ -1,0 +1,25 @@
+server:
+  port: 9000
+
+spring:
+  jpa:
+    show-sql: false
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+        globally_quoted_identifiers: true
+        format_sql: false
+        enable_lazy_load_no_trans: true
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/example?useSSL=false&characterEncoding=utf-8&serverTimezone=Asia/Shanghai&useTimezone=true
+    username: root
+    password: root1234?
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      maximum-pool-size: 20
+  jackson:
+    serialization:
+      FAIL_ON_EMPTY_BEANS: false

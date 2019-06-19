@@ -10,6 +10,8 @@
     <modules>
         <module>jdbc</module>
         <module>javacore</module>
+        <module>full.cpu</module>
+        <module>full.cpu</module>
     </modules>
     <packaging>pom</packaging>
     <build>

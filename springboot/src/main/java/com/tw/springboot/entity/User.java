@@ -1,14 +1,22 @@
 package com.tw.springboot.entity;
 
+import javax.persistence.*;
 import java.io.Serializable;
 
 /**
  * Created by Administrator on 2017/2/15.
  */
+@Entity
+@Table(name = "user")
 public class User implements Serializable {
 
-
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    private String name;
+
+    private Integer age;
 
     public Long getId() {
         return id;
@@ -22,27 +30,16 @@ public class User implements Serializable {
         return name;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        User user = (User) o;
-
-        return id != null ? id.equals(user.id) : user.id == null;
-    }
-
-    @Override
-    public int hashCode() {
-        return id != null ? id.hashCode() : 0;
-    }
-
     public void setName(String name) {
         this.name = name;
     }
 
-    private String name;
+    public Integer getAge() {
+        return age;
+    }
 
-
+    public void setAge(Integer age) {
+        this.age = age;
+    }
 }
 
