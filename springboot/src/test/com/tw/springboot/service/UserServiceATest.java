@@ -18,8 +18,10 @@ public class UserServiceATest {
 
     @Test
     public void update() {
-        userService.update(1L);
         userServiceA.update(2L);
 
+        //userService.update(1L);
+
     }
+
 }

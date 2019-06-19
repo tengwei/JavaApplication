@@ -11,6 +11,9 @@ public class UserServiceA {
     @Autowired
     private UserRepository userRepository;
 
+    @Autowired
+    private UserService userService;
+
     public User getById(Long id) {
         return userRepository.getOne(id);
     }
@@ -20,5 +23,8 @@ public class UserServiceA {
         User user = userRepository.findById(id).get();
         user.setName("12345");
         userRepository.save(user);
+
+        userService.update(1L);
+        int i = 1 / 0;
     }
 }
