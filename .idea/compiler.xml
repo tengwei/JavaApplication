@@ -6,10 +6,14 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="elk-logback" />
+        <module name="fullcpu" />
         <module name="javacore" />
         <module name="jdbc" />
+        <module name="springbootexample" />
+        <module name="springmvc" />
+        <module name="springmvcrest" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="8" />
   </component>
 </project>

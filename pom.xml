@@ -12,6 +12,7 @@
         <module>javacore</module>
         <module>full.cpu</module>
         <module>full.cpu</module>
+        <module>elk-logback</module>
     </modules>
     <packaging>pom</packaging>
     <build>
