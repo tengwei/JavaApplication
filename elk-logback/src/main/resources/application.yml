@@ -1,2 +1,5 @@
 server:
   port: 9001
+
+
+spring.sleuth.sampler.percentage: 0.1

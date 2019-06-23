@@ -17,16 +17,18 @@ public class App {
 
         SpringApplication.run(App.class, args);
 
-        int i = 0;
-        while (i++ < 10000) {
-            try {
-                logger.debug("debug" + String.valueOf(i));
-                logger.info("info" + String.valueOf(i));
-                logger.warn("warn" + String.valueOf(i));
-                int j = 1 / 0;
-            } catch (Exception ex) {
-                logger.error("info" + String.valueOf(i), ex);
-            }
-        }
+//        int i = 0;
+//        while (i++ < 10000) {
+//            try {
+//                logger.debug("debug" + String.valueOf(i));
+//                logger.info("info" + String.valueOf(i));
+//                logger.warn("warn" + String.valueOf(i));
+//                int j = 1 / 0;
+//            } catch (Exception ex) {
+//                logger.error("info" + String.valueOf(i), ex);
+//            }
+//        }
     }
+
+
 }
