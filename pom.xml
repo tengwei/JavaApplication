@@ -11,8 +11,13 @@
         <module>jdbc</module>
         <module>javacore</module>
         <module>full.cpu</module>
-        <module>full.cpu</module>
+        <module>springmvcrest</module>
         <module>elk-logback</module>
+        <module>springmvc</module>
+        <module>springboot</module>
+
+        <module>transaction-message-demo</module>
+
     </modules>
     <packaging>pom</packaging>
     <build>

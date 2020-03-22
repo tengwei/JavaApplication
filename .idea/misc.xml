@@ -8,9 +8,7 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/springboot/pom.xml" />
-        <option value="$PROJECT_DIR$/springmvc/pom.xml" />
-        <option value="$PROJECT_DIR$/springmvcrest/pom.xml" />
+        <option value="$PROJECT_DIR$/transaction-message-demo/pom.xml" />
       </list>
     </option>
   </component>

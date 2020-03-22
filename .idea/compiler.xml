@@ -7,9 +7,10 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="elk-logback" />
-        <module name="fullcpu" />
+        <module name="full.cpu" />
         <module name="javacore" />
         <module name="jdbc" />
+        <module name="rocketmq" />
         <module name="springbootexample" />
         <module name="springmvc" />
         <module name="springmvcrest" />
